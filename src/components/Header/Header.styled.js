@@ -2,15 +2,13 @@ import styled from "styled-components";
 
 export const StyledContainer = styled("div")`
   margin: 0 auto;
-  
   // width: 100%;
-  height: 90vh;
+ 
 
   padding-right: 20px;
   padding-left: 20px;
 
-  color: ${(p) => p.theme.colors.gold};
-  border: 2px solid ${(p) => p.theme.colors.gold};
+  border: 2px solid red;
 
   ${(p) => p.theme.mq.mobileOnly} {
     max-width: 320px;
