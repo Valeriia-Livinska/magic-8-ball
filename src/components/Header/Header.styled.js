@@ -1,28 +1,23 @@
 import styled from "styled-components";
 
-export const StyledContainer = styled("div")`
-  margin: 0 auto;
-  // width: 100%;
+export const StyledHeader = styled("div")`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  & nav{
+   flex-grow: 1;
+  }
+
+  & nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+    & li a {
+      font-family: ${(p) => p.theme.fonts.heading};
+      font-size: ${(p) => p.theme.fontSizes.ml};
+
+      color: ${(p) => p.theme.colors.turquoise};
  
-
-  padding-right: 20px;
-  padding-left: 20px;
-
-  border: 2px solid red;
-
-  ${(p) => p.theme.mq.mobileOnly} {
-    max-width: 320px;
-  }
-
-  ${(p) => p.theme.mq.tablet} {
-    width: 768px;
-    // padding-right: 32px;
-    // padding-left: 32px;
-  }
-
-  ${(p) => p.theme.mq.desktop} {
-    width: 1280px;
-    // padding-right: 16px;
-    // padding-left: 16px;
-  }
 `;

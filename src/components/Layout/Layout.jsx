@@ -1,5 +1,7 @@
 import { Outlet, NavLink } from "react-router-dom";
 import { Suspense } from "react";
+import Header from "../Header/Header";
+import Logo from "../Logo/Logo";
 
 // lazy used in APP let you not call load until the first time you attempt to render a component
 // then it will be cached - for this we need to use export default
@@ -10,7 +12,8 @@ import { Suspense } from "react";
 const Layout = () => {
   return (
     <>
-      <header>
+      <Header>
+        <Logo/>
         <nav>
           <ul>
             <li>
@@ -27,12 +30,16 @@ const Layout = () => {
             </li>
           </ul>
         </nav>
-      </header>
+      </Header>
+      <hr/>
       <Suspense
       // fallback={
       //   <Spinner />
       // }
       >
+        <br></br>
+        <br></br>
+        <br></br>
         <Outlet />
       </Suspense>
     </>

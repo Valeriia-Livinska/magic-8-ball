@@ -16,7 +16,7 @@ const App = () => {
   return (
     <BgroundContainer>
       <Container>
-        *************CONTAINER*************
+
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />

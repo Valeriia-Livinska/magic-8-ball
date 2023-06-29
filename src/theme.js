@@ -13,6 +13,10 @@ export const theme = {
     gold: "#BFA181",
     text: "#fff",
     textColorized: "#E0144C",
+    darkBlueLite: "#081623",
+    turquoiseLite: "#2db2a9",
+    goldLite: "#e2c798",
+
     // border: "darkgrey",
   },
 
@@ -28,6 +32,7 @@ export const theme = {
     xs: "12px",
     s: "14px",
     m: "16px",
+    ml: "24px",
     l: "32px",
     xl: "64px",
   },
