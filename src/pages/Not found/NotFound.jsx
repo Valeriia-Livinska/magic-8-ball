@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Container from "../../components/Container/Container";
 
 const NotFound = () => {
   const navigate = useNavigate();
@@ -10,7 +11,15 @@ const NotFound = () => {
     }, 1000);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  return <h1>Not Found</h1>;
+  return (
+    <main>
+      <section>
+        <Container>
+          <h1>Not Found</h1>
+        </Container>
+      </section>
+    </main>
+  );
 };
 
 export default NotFound;
