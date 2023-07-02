@@ -1,25 +1,36 @@
 import styled from "styled-components";
 
+export const LayoutStyled = styled.div`
+  min-height: 100vh;
+`;
+
 export const Header = styled.header`
   padding-top: 20px;
 `;
 
 export const NavContainer = styled.div`
   position: relative;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  gap: 20px;
+
   padding-bottom: 20px;
 
   &::after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: 0;
     display: block;
+
+    left: 0;
+    bottom: 0px;
+
     width: 100%;
-    height: 4px;
+    height: 2px;
+
     background-color: ${(p) => p.theme.colors.gold};
-    border-radius: 2px;
+    // border-radius: 2px;
   }
 `;

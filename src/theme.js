@@ -3,17 +3,24 @@ export const breakpoints = {
   tab: "768",
   desk: "1280",
 };
+// export const moonSize = {
+//   size: "320",
+// };
 
 export const theme = {
   colors: {
     black: "#000",
     white: "#fff",
+
     darkBlue: "#0A1828",
     darkBlueLite: "#081623",
+
     turquoise: "#178582",
     turquoiseLite: "#2db2a9",
+
     gold: "#BFA181",
     goldLite: "#e2c798",
+
     text: "#fff",
     textColorized: "#E0144C",
   },

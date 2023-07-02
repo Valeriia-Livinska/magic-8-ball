@@ -8,6 +8,7 @@ export const StyledContainer = styled("div")`
 
   padding-right: 20px;
   padding-left: 20px;
+  // border: 2px solid green;
 
   ${(p) => p.theme.mq.mobileOnly} {
     max-width: 320px;

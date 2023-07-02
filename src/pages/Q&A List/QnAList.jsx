@@ -5,7 +5,7 @@ const QnAList = () => {
     <main>
       <section>
         <Container>
-          <h1>QnAList page</h1>
+          <h1>QnA List page</h1>
         </Container>
       </section>
     </main>
