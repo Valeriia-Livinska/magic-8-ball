@@ -15,7 +15,7 @@ import { Header, NavContainer } from "./Layout.styled";
 
 const Layout = () => {
   return (
-    < >
+    <>
       <Header>
         <Container>
           <NavContainer>
@@ -25,13 +25,21 @@ const Layout = () => {
         </Container>
       </Header>
       <Suspense
+
       // fallback={
       //   <Spinner />
       // }
       >
-          <Outlet />
+        <Outlet />
       </Suspense>
-
+      <Header>
+        <Container>
+          <NavContainer>
+            <Logo />
+            <Nav />
+          </NavContainer>
+        </Container>
+      </Header>
     </>
   );
 };

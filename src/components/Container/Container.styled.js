@@ -22,7 +22,7 @@ export const StyledContainer = styled("div")`
 
   ${(p) => p.theme.mq.desktop} {
     width: 1280px;
-    padding-right: 16px;
-    padding-left: 16px;
+    padding-right: 48px;
+    padding-left: 48px;
   }
 `;

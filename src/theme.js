@@ -3,9 +3,6 @@ export const breakpoints = {
   tab: "768",
   desk: "1280",
 };
-// export const moonSize = {
-//   size: "320",
-// };
 
 export const theme = {
   colors: {

@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-export const LayoutStyled = styled.div`
-  min-height: 100vh;
-`;
+// export const LayoutStyled = styled.div`
+//   min-height: 80vh;
+//   border: 10px solid red;
+// `;
 
 export const Header = styled.header`
   padding-top: 20px;
