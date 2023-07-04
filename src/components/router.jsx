@@ -6,7 +6,7 @@ import Layout from "./Layout/Layout.jsx";
 // import QnAList from "../pages/Q&A List/QnAList";
 // import Register from "../pages/Register/Register";
 
-const HomePage = lazy(() => import("../pages/Home/Home.jsx"));
+const HomePage = lazy(() => import("../pages/Home/Home1.jsx"));
 const LoginPage = lazy(() => import("../pages/Login/Login.jsx"));
 const QnAListPage = lazy(() => import("../pages/Q&A List/QnAList.jsx"));
 const Register = lazy(() => import("../pages/Register/Register.jsx"));
