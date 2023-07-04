@@ -15,7 +15,9 @@ body {
   overflow: hidden;
 
   background: #0a1828 url("./assets/images/stars.png") repeat;
-}
+  background-position: center;
+
+ }
 
 body::after {
   content: "";
@@ -32,6 +34,8 @@ body::after {
   background: transparent url("./assets/images/twinklingDarkBlue.png") repeat;
 
   animation: move-background 30s linear infinite;
+  
+  
 }
 
 @keyframes move-background {
@@ -85,4 +89,16 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+main {
+ /* position: relative; */
+  /* height: 90vh; */
+}
+
+section {
+  font-size: 24px;
+  color: #bfa181;
+
+  text-align: center;
 }

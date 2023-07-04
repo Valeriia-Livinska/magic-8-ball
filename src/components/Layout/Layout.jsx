@@ -5,6 +5,8 @@ import Logo from "../Logo/Logo";
 import Nav from "../Navigation/Navigation";
 import { Header, NavContainer } from "./Layout.styled";
 
+// import { LayoutStyled } from "./Layout.styled";
+
 // lazy used in APP let you not call load until the first time you attempt to render a component
 // then it will be cached - for this we need to use export default
 // Suspense allow you to add some spinner or something that will let know to user that page is loading
@@ -23,12 +25,21 @@ const Layout = () => {
         </Container>
       </Header>
       <Suspense
+
       // fallback={
       //   <Spinner />
       // }
       >
         <Outlet />
       </Suspense>
+      <Header>
+        <Container>
+          <NavContainer>
+            <Logo />
+            <Nav />
+          </NavContainer>
+        </Container>
+      </Header>
     </>
   );
 };

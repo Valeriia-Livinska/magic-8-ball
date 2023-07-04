@@ -8,6 +8,7 @@ export const StyledContainer = styled("div")`
 
   padding-right: 20px;
   padding-left: 20px;
+  // border: 2px solid green;
 
   ${(p) => p.theme.mq.mobileOnly} {
     max-width: 320px;
@@ -21,7 +22,7 @@ export const StyledContainer = styled("div")`
 
   ${(p) => p.theme.mq.desktop} {
     width: 1280px;
-    padding-right: 16px;
-    padding-left: 16px;
+    padding-right: 48px;
+    padding-left: 48px;
   }
 `;
