@@ -3,6 +3,24 @@
 html {
   scroll-behavior: smooth;
 }
+/* Extra small devices (landscape tablets, 320px and down) */
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 14px;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 30px;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 40px;
+  }
+}
 
 body {
   margin: 0;
@@ -16,8 +34,7 @@ body {
 
   background: #0a1828 url("./assets/images/stars.png") repeat;
   background-position: center;
-
- }
+}
 
 body::after {
   content: "";
@@ -34,8 +51,6 @@ body::after {
   background: transparent url("./assets/images/twinklingDarkBlue.png") repeat;
 
   animation: move-background 30s linear infinite;
-  
-  
 }
 
 @keyframes move-background {
@@ -89,11 +104,6 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-main {
- /* position: relative; */
-  /* height: 90vh; */
 }
 
 section {

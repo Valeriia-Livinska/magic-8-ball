@@ -1,7 +1,12 @@
 import Container from "../../components/Container/Container";
-import { HomeWrapper, ImgWrapper } from "./Home1.styled";
+import {
+  FormStyled,
+  HomeWrapper,
+  ImgWrapper,
+  MoonEffects,
+} from "./Home1.styled";
 import moonOnHand from "../../assets/images/moonOnHand_4.png";
-import { Form } from "react-router-dom";
+// import { Form } from "react-router-dom";
 
 const Home1 = () => {
   return (
@@ -11,9 +16,9 @@ const Home1 = () => {
           <HomeWrapper>
             <h1>Home page</h1>
 
-            <Form
+            <FormStyled
               method="post"
-              action="destroy"
+              // action="destroy"
               // onSubmit={(event) => {
               //   if (
               //     !confirm("Please confirm you want to delete this record.")
@@ -22,23 +27,29 @@ const Home1 = () => {
               //   }
               // }}
             >
-              {" "}
-              <label>
-                <span>Задайте вопрос</span>
-                <input
-                  type="text"
-                  name="twitter"
-                  placeholder=" Your question, please!"
-                  // defaultValue={contact.twitter}
-                />
-              </label>
-              <div>
-                <button type="submit">Получить ответ</button>
+              <div id="question-float">
+                <div id="question-rotate">
+                  <input
+                    id="question-text"
+                    type="text"
+                    name="question"
+                    // value=""
+                    // defaultValue={contact.twitter}
+                    required
+                    autocomplete="off"
+                    // pattern="^[А-Яа-яЁё?\s]+$"
+                    //  size="35"
+                    placeholder=" Type in your question & submit."
+                  />
+
+                  <button type="submit">submit</button>
+                </div>
               </div>
-            </Form>
+            </FormStyled>
+
             <ImgWrapper>
               <img src={moonOnHand} alt="Moon fortune-telling" />
-              <div id="moon-effects"></div>
+              <MoonEffects />
             </ImgWrapper>
           </HomeWrapper>
         </Container>

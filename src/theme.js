@@ -28,6 +28,7 @@ export const theme = {
     body: "system-ui, sans-serif",
     heading: "system-ui, sans-serif",
     monospace: "Menlo, monospace",
+    // import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
   },
 
   fontSizes: {

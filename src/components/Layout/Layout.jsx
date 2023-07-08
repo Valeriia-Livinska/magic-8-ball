@@ -25,21 +25,12 @@ const Layout = () => {
         </Container>
       </Header>
       <Suspense
-
       // fallback={
       //   <Spinner />
       // }
       >
         <Outlet />
       </Suspense>
-      <Header>
-        <Container>
-          <NavContainer>
-            <Logo />
-            <Nav />
-          </NavContainer>
-        </Container>
-      </Header>
     </>
   );
 };
