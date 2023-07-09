@@ -8,120 +8,112 @@ export const HomeWrapper = styled.div`
   justify-content: space-between;
   height: 100vh;
 `;
-const blink = keyframes`
-    0% {
-      background-position: 20% center;
-    }
-    100% {
-      background-position: 80% center;
-    }
-`;
 
 export const FormStyled = styled(Form)`
   transform: translateY(-1.6rem);
+`;
 
-  #question-float {
+const textFloat = keyframes`
+    0% {
+      transform: translateX(-55%);
+    }
+    50% {
+      transform: translateX(-45%);
+    }
+    100% {
+      transform: translateX(-55%);
+    }
+`;
+
+export const FloatQuestionContainer = styled.div`
+  position: absolute;
+  width: 18rem;
+
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  animation: ${textFloat} 12s infinite linear;
+`;
+
+const textRotate = keyframes`
+   0% {
+      transform: rotate(2deg);
+    }
+    50% {
+      transform: rotate(-2deg);
+    }
+    100% {
+      transform: rotate(2deg);
+    }
+`;
+
+export const RotateQuestionContainer = styled.div`
+  position: relative;
+  &::after {
+    content: "";
     position: absolute;
-    width: 18rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1.6rem;
 
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
 
-    animation: textFloat 12s infinite linear;
+    border-bottom: 1px dashed ${(p) => p.theme.colors.gold};
+    opacity: 0.7;
+    z-index: -1;
   }
-  @keyframes textFloat1 {
+  animation: text 8s infinite linear;
+
+  animation: ${textRotate} 12s infinite linear;
+`;
+
+const textSize1 = keyframes`
     0% {
-      transform: translateX(-60%);
+      font-size: 1rem;
+      opacity: 1;
     }
     50% {
-      transform: translateX(-40%);
+      font-size: 0.95rem;
+      opacity: 0.6;
     }
     100% {
-      transform: translateX(-60%);
+      font-size: 1rem;
+      opacity: 1;
     }
-  }
+`;
 
-  #question-rotate {
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1.6rem;
+// export const TextInput = styled.input.attrs((props) => ({
+//   type: props.type,
+//   // name: props.name,
+//   // required: props.required,
+//   // autoComplete: props.autoComplete,
+//   // placeholder: props.placeholder,
+// }))`
+export const TextInput = styled.input`
 
-      border-bottom-left-radius: 0.8rem;
-      border-bottom-right-radius: 0.8rem;
-
-      border-bottom: 1px dashed ${(p) => p.theme.colors.gold};
-      opacity: 0.7;
-      z-index: -1;
-    }
-    animation: textRotate 8s infinite linear;
-  }
-  @keyframes textRotate1 {
-    0% {
-      transform: rotate(5deg);
-    }
-    50% {
-      transform: rotate(-5deg);
-    }
-    100% {
-      transform: rotate(5deg);
-    }
-  }
-
-  #question-text {
+  // font-size: ${(props) => props.size};
     position: absolute;
     left: 0px;
     width: 16rem;
     height: 1.6rem;
 
     font-size: 1rem;
-
-    color: ${(p) => p.theme.colors.goldLite};
     text-align: center;
 
+    color: ${(p) => p.theme.colors.goldLite};
+    background-color: transparent;
     caret-color: ${(p) => p.theme.colors.gold};
-    background: transparent;
 
     border: none;
     outline: none;
-    // background-size: 10% auto;
 
-    // animation: textSize 5s infinite linear;
-    // animation-play-state: running;
+    animation: ${textSize1} 5s infinite linear;
 
-    &::-webkit-input-placeholder {
-      text-align: center;
-      background-image: linear-gradient(
-        -225deg,
-        #231557 0%,
-        #44107a 15%,
-        #ff1361 35%,
-        #fff800 55%,
-        #ff1361 70%,
-        #44107a 85%,
-        #231557 100%
-      );
-
-      // background-color: red;
-      background-repeat: no-repeat;
-      background-size: 10% auto;
-      background-position: 90% center;
-      // transform: translateX(10%);
-
-      // color: ${(p) => p.theme.colors.turquoise};
-      // opacity: 0.5;
-      color: rgba(0, 0, 0, 0.2);
-
-      // -webkit-background-clip: text;
-      // color: transparent;
-
-      // animation: flick 1.5s infinite linear;
-      animation: ${blink} 2s linear infinite alternate;
+    &::placeholder {
+      color: ${(p) => p.theme.colors.turquoise};
     }
 
     &:focus::placeholder {
@@ -131,37 +123,25 @@ export const FormStyled = styled(Form)`
 
     &:focus {
       opacity: 1;
-      // animation-play-state: paused;
     }
   }
+`;
 
-  // @keyframes flick {
-  //   0% {
-  //     background-position: 20% center;
-  //   }
-  //   100% {
-  //     background-position: 80% center;
-  //   }
-  // }
-
-  @keyframes textSize1 {
+const blink = keyframes`
     0% {
-      font-size: 1rem;
-      opacity: 1;
-    }
-    50% {
-      font-size: 0.9rem;
-      opacity: 0.3;
+      background-position: 100% center;
     }
     100% {
-      font-size: 1rem;
-      opacity: 1;
+      background-position: 0% center;
     }
-  }
+`;
 
-  [type="submit"] {
-    position: absolute;
-    right: 0px;
+// export const SubmitButton = styled.button.attrs((props) => ({
+//   type: "submit",
+// }))`
+export const SubmitButton = styled.button`
+      position: absolute;
+      right: 0px;
     height: 1.6rem;
     width: 1.6rem;
 
@@ -170,22 +150,43 @@ export const FormStyled = styled(Form)`
     padding: 0px;
 
     font-size: 0.4rem;
-    color: ${(p) => p.theme.colors.turquoiseLite};
 
-    background: transparent;
+    color: transparent;
+
     cursor: pointer;
+
+      background: linear-gradient(
+        -80deg,
+        ${(p) => p.theme.colors.turquoise} 0%,
+        ${(p) => p.theme.colors.turquoise} 48%,
+        white 49%,
+        white 50%,
+        ${(p) => p.theme.colors.turquoise} 51%,
+        ${(p) => p.theme.colors.turquoise} 100%
+      );
+
+       background-repeat: no-repeat;
+      background-size: 500% auto;
+      background-position: -100% center;
+      -webkit-background-clip: text;
+
+      animation: ${blink} 4s linear infinite;
 
     border-radius: 50%;
     border: 1px dashed ${(p) => p.theme.colors.gold};
-    opacity: 0.4;
+    opacity: 0.5;
+    box-shadow:   0 0 5px rgba(255, 255, 255),
+       0 0 25px rgba(255, 255, 255, 0.8);
+
     &:hover {
       color: ${(p) => p.theme.colors.gold};
       opacity: 1;
       transition-duration: 0.5s;
     }
+
     transition-duration: 0.5s;
-  }
-`;
+
+  }`;
 
 export const ImgWrapper = styled.div`
   position: relative;
@@ -195,7 +196,7 @@ export const ImgWrapper = styled.div`
   max-width: 35vh;
 `;
 
-const effectRotate1 = keyframes`
+const effectRotate = keyframes`
      0% {
       transform: rotate(0deg);
     }
@@ -203,7 +204,7 @@ const effectRotate1 = keyframes`
       transform: rotate(360deg);
     }
 `;
-const effectPuls1 = keyframes`
+const effectPuls = keyframes`
  
     0% {
       transform: scale(1.03, 0.98);
@@ -216,7 +217,6 @@ const effectPuls1 = keyframes`
     }
 
 `;
-
 export const MoonEffects = styled.div`
   position: absolute;
 
@@ -225,7 +225,7 @@ export const MoonEffects = styled.div`
   right: 0;
   padding-top: 100%;
 
-  animation: ${effectRotate1} 25s infinite linear;
+  animation: ${effectRotate} 25s infinite linear;
 
   &:before {
     content: "";
@@ -252,6 +252,6 @@ export const MoonEffects = styled.div`
 
     box-shadow: inset 0 0 25px #f1f1ef, inset 0 0 75px #f1f1ef;
 
-    animation: ${effectPuls1} 3s infinite linear;
+    animation: ${effectPuls} 3s infinite linear;
   }
 `;

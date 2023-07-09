@@ -1,9 +1,13 @@
 import Container from "../../components/Container/Container";
 import {
+  FloatQuestionContainer,
   FormStyled,
   HomeWrapper,
   ImgWrapper,
   MoonEffects,
+  RotateQuestionContainer,
+  SubmitButton,
+  TextInput,
 } from "./Home1.styled";
 import moonOnHand from "../../assets/images/moonOnHand_4.png";
 // import { Form } from "react-router-dom";
@@ -27,26 +31,23 @@ const Home1 = () => {
               //   }
               // }}
             >
-              <div id="question-float">
-                <div id="question-rotate">
-                  <input
-                    id="question-text"
+              <FloatQuestionContainer>
+                <RotateQuestionContainer>
+                  <TextInput
                     type="text"
                     name="question"
                     // value=""
                     // defaultValue={contact.twitter}
                     required
-                    autocomplete="off"
+                    autoComplete="off"
                     // pattern="^[А-Яа-яЁё?\s]+$"
                     //  size="35"
                     placeholder=" Type in your question & submit."
                   />
-
-                  <button type="submit">submit</button>
-                </div>
-              </div>
+                  <SubmitButton type="submit">submit</SubmitButton>
+                </RotateQuestionContainer>
+              </FloatQuestionContainer>
             </FormStyled>
-
             <ImgWrapper>
               <img src={moonOnHand} alt="Moon fortune-telling" />
               <MoonEffects />
