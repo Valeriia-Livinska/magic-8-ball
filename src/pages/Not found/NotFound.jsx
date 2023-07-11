@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import { useNavigate, useRouteError } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Container from "../../components/Container/Container";
 
 const NotFound = () => {
   const navigate = useNavigate();
-  // добавлено
-  const myError = useRouteError();
+  // if use react router 6.4
+  // const myError = useRouteError();
 
   useEffect(() => {
     setTimeout(() => {
@@ -14,15 +14,13 @@ const NotFound = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <main>
-      <section>
-        <Container>
-          <h1>Not Found</h1>
-          {/* // добавлено */}
-          <p>{myError.statusText ?? myError.message}</p>
-        </Container>
-      </section>
-    </main>
+    <section>
+      <Container>
+        <h1>Not Found</h1>
+        {/* // if use react router 6.4 */}
+        {/* <p>{myError.statusText ?? myError.message}</p> */}
+      </Container>
+    </section>
   );
 };
 

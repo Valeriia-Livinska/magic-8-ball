@@ -1,15 +1,14 @@
 import Container from "../../components/Container/Container";
+import transition from "../../services/transition/transition";
 
 const Login = () => {
   return (
-    <main>
-      <section>
-        <Container>
-          <h1>Login page</h1>
-        </Container>
-      </section>
-    </main>
+    <section>
+      <Container>
+        <h1>Login page</h1>
+      </Container>
+    </section>
   );
 };
 
-export default Login;
+export default transition(Login);
