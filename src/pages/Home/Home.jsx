@@ -8,7 +8,7 @@ import {
   ImgWrapper,
   MoonEffects,
 } from "./Home.styled";
-import moonOnHand from "../../assets/images/moonOnHand_4.png";
+import moonOnHand from "../../assets/images/moonOnHand_4.webp";
 
 const Home = () => {
   const [query, setQuery] = useState("");
