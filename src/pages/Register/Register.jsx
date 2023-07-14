@@ -1,21 +1,14 @@
-import { useNavigation } from "react-router-dom";
 import Container from "../../components/Container/Container";
+import transition from "../../services/transition/transition";
 
 const Register = () => {
-  const { state } = useNavigation();
- 
   return (
-    <main>
-      <section>
-        <Container>
-          <h1>Register page</h1>
-          {state === "loading" ? (
-            <div className="loader">Загружаюсь, ЖДИТЕ! </div>
-          ) : null}
-        </Container>
-      </section>
-    </main>
+    <section>
+      <Container>
+        <h1>Register page</h1>
+      </Container>
+    </section>
   );
 };
 
-export default Register;
+export default transition(Register);

@@ -1,30 +1,28 @@
 import Container from "../../components/Container/Container";
-import { HomeStyled } from "./Home.styled";
-import { Form } from "react-router-dom";
+import transition from "../../services/transition/transition";
+import {
+  HomeSection,
+  HomeWrapper,
+  FormStyled,
+  FloatQuestionContainer,
+  RotateQuestionContainer,
+  TextInput,
+  SubmitButton,
+  ImgWrapper,
+  MoonEffects,
+} from "./Home.styled";
+import moonOnHand from "../../assets/images/moonOnHand_4.png";
 
 const Home = () => {
   return (
-    <Container>
-      <main>
-        <section>
+    <HomeSection>
+      <Container>
+        <HomeWrapper>
           <h1>Home page</h1>
-          <label>
-            <span>Задайте вопрос</span>
-            <input
-              type="text"
-              name="twitter"
-              placeholder=" Your question, please!"
-              // defaultValue={contact.twitter}
-            />
-          </label>
-          <HomeStyled>
-            <div id="moon-image">
-              <div id="moon-effects"></div>
-            </div>
-          </HomeStyled>
-          <Form
+
+          <FormStyled
             method="post"
-            action="destroy"
+            // action="destroy"
             // onSubmit={(event) => {
             //   if (
             //     !confirm("Please confirm you want to delete this record.")
@@ -33,12 +31,31 @@ const Home = () => {
             //   }
             // }}
           >
-            <button type="submit">Получить ответ</button>
-          </Form>
-        </section>
-      </main>
-    </Container>
+            <FloatQuestionContainer>
+              <RotateQuestionContainer>
+                <TextInput
+                  type="text"
+                  name="question"
+                  // value=""
+                  // defaultValue={contact.twitter}
+                  required
+                  autoComplete="off"
+                  // pattern="^[А-Яа-яЁё?\s]+$"
+                  //  size="35"
+                  placeholder=" Type in your question & submit."
+                />
+                <SubmitButton type="submit">submit</SubmitButton>
+              </RotateQuestionContainer>
+            </FloatQuestionContainer>
+          </FormStyled>
+          <ImgWrapper>
+            <img src={moonOnHand} alt="Moon fortune-telling" />
+            <MoonEffects />
+          </ImgWrapper>
+        </HomeWrapper>
+      </Container>
+    </HomeSection>
   );
 };
 
-export default Home;
+export default transition(Home);

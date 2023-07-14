@@ -29,7 +29,9 @@ const Layout = () => {
       //   <Spinner />
       // }
       >
-        <Outlet />
+        <main>
+          <Outlet />
+        </main>
       </Suspense>
     </>
   );
