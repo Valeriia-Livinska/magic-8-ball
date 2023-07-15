@@ -1,5 +1,5 @@
 import Container from "../../components/Container/Container";
-import transition from "../../services/transition/transition";
+import transition from "../../components/Helpers/transition/transition";
 
 const Register = () => {
   return (
