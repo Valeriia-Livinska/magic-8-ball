@@ -7,7 +7,7 @@ import {
   SubmitButton,
 } from "./Form.styled";
 
-const QuestionForm = ({ onSubmit }) => {
+const QuestionForm = ({ onSubmit, getAnswer }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -22,21 +22,13 @@ const QuestionForm = ({ onSubmit }) => {
       // setLoading(true);
       try {
         const data = await fetchAnswers();
-        console.log(data);
-        // if (data.length > 0) {
-        // setUsers((prevUsers) =>
-        //   page === 1 ? data : [...prevUsers, ...data]
-        // );
-        // setTotalCount((prevState) =>
-        //   page === 1
-        //     ? dataTotalCount - data.length
-        //     : prevState - data.length
-        // );
-        // setError(null);
-        // }
+        if (data.length > 0) {
+          getAnswer(data);
+          // setError(null);
+        }
       } catch (error) {
         // setError(error);
-        // notifyErr();
+        // error notification
       } finally {
         // setLoading(false);
       }
