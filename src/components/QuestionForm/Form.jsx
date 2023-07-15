@@ -1,3 +1,4 @@
+import { fetchAnswers } from "../Helpers/api";
 import {
   Form,
   DecoFloatInput,
@@ -16,6 +17,31 @@ const QuestionForm = ({ onSubmit }) => {
       alert("Fill in the input value");
     }
     onSubmit(query);
+
+    const getAnswersArr = async () => {
+      // setLoading(true);
+      try {
+        const data = await fetchAnswers();
+        console.log(data);
+        // if (data.length > 0) {
+        // setUsers((prevUsers) =>
+        //   page === 1 ? data : [...prevUsers, ...data]
+        // );
+        // setTotalCount((prevState) =>
+        //   page === 1
+        //     ? dataTotalCount - data.length
+        //     : prevState - data.length
+        // );
+        // setError(null);
+        // }
+      } catch (error) {
+        // setError(error);
+        // notifyErr();
+      } finally {
+        // setLoading(false);
+      }
+    };
+    getAnswersArr();
   };
 
   // disable to button for several seconds while fetching

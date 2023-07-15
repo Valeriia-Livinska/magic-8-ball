@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Container from "../../components/Container/Container";
-import transition from "../../services/transition/transition";
 import QuestionForm from "../../components/QuestionForm/Form";
+import transition from "../../services/transition/transition";
 import {
   HomeSection,
   HomeWrapper,
@@ -12,6 +12,7 @@ import moonOnHand from "../../assets/images/moonOnHand_4.webp";
 
 const Home = () => {
   const [query, setQuery] = useState("");
+  // const [answer, setAnswer] = useState("");
 
   const getQuery = (query) => {
     setQuery(query);
