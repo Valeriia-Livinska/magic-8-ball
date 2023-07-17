@@ -27,13 +27,14 @@ const Home = () => {
 
   console.log(query);
   console.log(answer);
+  
   return (
     <HomeSection>
       <Container>
         <HomeWrapper>
           <h1>Home page</h1>
           <QuestionForm onSubmit={getQuery} getAnswer={getAnswer} />
-          <AnswerField answer={answer} />
+          <AnswerField answer={"answer"} />
           <ImgWrapper>
             <img src={moonOnHand} alt="Moon fortune-telling" />
             <MoonEffects />

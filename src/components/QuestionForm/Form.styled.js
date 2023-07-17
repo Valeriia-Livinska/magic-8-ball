@@ -18,7 +18,7 @@ const textFloat = keyframes`
 
 export const DecoFloatInput = styled.div`
   position: absolute;
-  width: 18rem;
+  width: 19.5rem;
 
   top: 0px;
   left: 50%;
@@ -46,11 +46,10 @@ export const DecoRotateInput = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
+    right: 1.8rem;
     height: 1.6rem;
 
     border-bottom-left-radius: 0.8rem;
-    border-bottom-right-radius: 0.8rem;
 
     border-bottom: 1px dashed ${(p) => p.theme.colors.gold};
     opacity: 0.7;
@@ -61,7 +60,7 @@ export const DecoRotateInput = styled.div`
   animation: ${textRotate} 12s infinite linear;
 `;
 
-const textSize1 = keyframes`
+const textSize = keyframes`
     0% {
       font-size: 1rem;
       opacity: 1;
@@ -79,12 +78,12 @@ const textSize1 = keyframes`
 export const Input = styled.input`
 
     position: absolute;
-    left: 0px;
+    left: 0.5rem;
     width: 16rem;
     height: 1.6rem;
 
-    font-size: 1rem;
-    text-align: center;
+    font-size:1rem;
+    text-align:center;
 
     color: ${(p) => p.theme.colors.goldLite};
     background-color: transparent;
@@ -92,8 +91,8 @@ export const Input = styled.input`
 
     border: none;
     outline: none;
-
-    animation: ${textSize1} 5s infinite linear;
+  
+    animation: ${textSize} 5s infinite linear;
 
     &::placeholder {
       color: ${(p) => p.theme.colors.turquoise};
@@ -122,39 +121,41 @@ const blink = keyframes`
 export const SubmitButton = styled.button`
     position: absolute;
     right: 0px;
-    height: 2rem;
-    width: 2rem;
+    top:-0.14rem;
+
+    height: 1.6rem;
+    width: 2.5rem;
 
     transform-origin: 50% 50%;
     transform: rotate(-30deg);
-    padding: 0px;
-
+  
     font-size: 0.6rem;
-    text-transform: uppercase;
-    color: transparent;
+     color: transparent;
 
     cursor: pointer;
 
     background: linear-gradient(
-        -80deg,
+        -110deg,
         ${(p) => p.theme.colors.turquoise} 0%,
         ${(p) => p.theme.colors.turquoise} 48%,
-        white 49%,
         white 50%,
-        ${(p) => p.theme.colors.turquoise} 51%,
+        white 50%,
+        ${(p) => p.theme.colors.turquoise} 52%,
         ${(p) => p.theme.colors.turquoise} 100%
       );
 
     background-repeat: no-repeat;
-    background-size: 500% auto;
-    background-position: -100% center;
+    background-size: 500% 18%;
+    background-position: top;
     -webkit-background-clip: text;
+    
+    background-color: ${(p) => p.theme.colors.turquoise};
 
     animation: ${blink} 4s linear infinite;
 
     border-radius: 50%;
     border: 1px dashed ${(p) => p.theme.colors.gold};
-    opacity: 0.5;
+    opacity: 0.6;
     box-shadow:   0 0 5px rgba(255, 255, 255),
        0 0 25px rgba(255, 255, 255, 0.8);
 

@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 export const HomeSection = styled.section`
   font-size: 24px;
-  color: #bfa181;
+  color: ${(p) => p.theme.colors.gold};
   text-align: center;
 `;
 

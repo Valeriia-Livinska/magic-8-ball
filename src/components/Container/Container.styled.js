@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledContainer = styled("div")`
+export const StyledContainer = styled.div`
   margin: 0 auto;
 
   width: 100%;
@@ -18,7 +18,7 @@ export const StyledContainer = styled("div")`
     width: 768px;
     padding-right: 32px;
     padding-left: 32px;
-    }
+  }
 
   ${(p) => p.theme.mq.desktop} {
     width: 1280px;

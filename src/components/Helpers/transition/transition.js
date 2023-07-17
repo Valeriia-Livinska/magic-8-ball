@@ -6,13 +6,13 @@ const transition = (OgComponent) => {
       <OgComponent />
       <SlideIn
         initial={{ scaleY: 0 }}
-        animate={{ scaleY: 0 }}
+        animate={{ scaleY: 0, opacity: 0.4 }}
         exit={{ scaleY: 1 }}
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
       />
       <SlideOut
         initial={{ scaleY: 1 }}
-        animate={{ scaleY: 0 }}
+        animate={{ scaleY: 0, opacity: 0.8 }}
         exit={{ scaleY: 0 }}
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
       />

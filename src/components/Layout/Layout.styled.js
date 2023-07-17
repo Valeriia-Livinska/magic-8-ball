@@ -29,7 +29,7 @@ export const NavContainer = styled.div`
     bottom: 0px;
 
     width: 100%;
-    height: 2px;
+    height:2px;
 
     background-color: ${(p) => p.theme.colors.gold};
     // border-radius: 2px;

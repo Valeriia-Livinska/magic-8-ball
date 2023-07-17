@@ -49,7 +49,7 @@ const QuestionForm = ({ onSubmit, getAnswer }) => {
             autoComplete="off"
             placeholder="Please type in your question"
           />
-          <SubmitButton type="submit">ask me</SubmitButton>
+          <SubmitButton type="submit">Ask ME</SubmitButton>
         </DecoRotateInput>
       </DecoFloatInput>
     </Form>
