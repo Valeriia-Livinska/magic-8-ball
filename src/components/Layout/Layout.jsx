@@ -29,7 +29,11 @@ const Layout = () => {
       //   <Spinner />
       // }
       >
-        <main>
+        <main
+          style={{
+            position: "relative",
+          }}
+        >
           <Outlet />
         </main>
       </Suspense>

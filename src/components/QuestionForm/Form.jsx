@@ -23,7 +23,7 @@ const QuestionForm = ({ onSubmit, getAnswer }) => {
 
     const getAnswersArr = async () => {
       setLoading(true);
-      console.log(loading);
+      // console.log(loading);
       try {
         const data = await fetchAnswers();
         if (data.length > 0) {
@@ -35,7 +35,7 @@ const QuestionForm = ({ onSubmit, getAnswer }) => {
         // error notification
       } finally {
         setLoading(false);
-        console.log(loading);
+        // console.log(loading);
       }
     };
     getAnswersArr();

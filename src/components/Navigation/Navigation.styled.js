@@ -7,16 +7,19 @@ export const HeaderNav = styled.nav`
 
 export const HeaderNavList = styled.ul`
   display: flex;
+ 
   justify-content: space-between;
   align-items: center;
 `;
 
 export const HeaderNavLink = styled(NavLink)`
   position: relative;
-  
+
   font-family: ${(p) => p.theme.fonts.heading};
   font-size: ${(p) => p.theme.fontSizes.ml};
   color: ${(p) => p.theme.colors.turquoise};
+
+   ${(p) => (p.disabled ? "pointer-events: none" : "pointer-events: auto")};
 
   &:hover::after {
     content: "";
@@ -61,3 +64,5 @@ export const HeaderNavLink = styled(NavLink)`
     transition-duration: 0.5s;
   }
 `;
+
+

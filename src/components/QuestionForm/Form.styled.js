@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 export const Form = styled.form`
-  transform: translateY(-1.6rem);
+  transform: translateY(-1rem);
 `;
 
 const textFloat = keyframes`

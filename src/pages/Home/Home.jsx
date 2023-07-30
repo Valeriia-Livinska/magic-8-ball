@@ -1,15 +1,15 @@
 import { useState } from "react";
-import Container from "../../components/Container/Container";
+// import Container from "../../components/Container/Container";
 import QuestionForm from "../../components/QuestionForm/Form";
 import AnswerField from "../../components/AnswerField";
 import transition from "../../components/Helpers/transition/transition";
 import {
-  HomeSection,
+  // HomeSection,
   HomeWrapper,
   ImgWrapper,
   MoonEffects,
 } from "./Home.styled";
-import moonOnHand from "../../assets/images/moonOnHand_4.webp";
+import moonOnHand from "../../assets/images/moonOnHand_5.png";
 import { randomAnswer } from "../../utils/randomAnswer";
 
 const Home = () => {
@@ -29,19 +29,20 @@ const Home = () => {
   console.log(answer);
   
   return (
-    <HomeSection>
-      <Container>
-        <HomeWrapper>
-          <h1>Home page</h1>
-          <QuestionForm onSubmit={getQuery} getAnswer={getAnswer} />
-          <AnswerField answer={"answer"} />
-          <ImgWrapper>
-            <img src={moonOnHand} alt="Moon fortune-telling" />
-            <MoonEffects />
-          </ImgWrapper>
-        </HomeWrapper>
-      </Container>
-    </HomeSection>
+    // <HomeSection>
+    // <Container>
+    <HomeWrapper>
+      <h1>Home page</h1>
+      <QuestionForm onSubmit={getQuery} getAnswer={getAnswer} />
+
+      <ImgWrapper>
+        <AnswerField answer={answer} />
+        <img src={moonOnHand} alt="Moon fortune-telling" />
+        <MoonEffects />
+      </ImgWrapper>
+    </HomeWrapper>
+    // </Container>
+    // </HomeSection>
   );
 };
 

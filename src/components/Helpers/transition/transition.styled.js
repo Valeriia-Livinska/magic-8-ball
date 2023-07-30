@@ -1,24 +1,21 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const SlideIn = styled(motion.div)`
-  position: fixed;
-  top: 92px;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: ${(p) => p.theme.colors.darkBlue};
- 
-  transform-origin: bottom;
-`;
+export const SlideFrame = styled(motion.div)`
+  position: absolute;
+  z-index: -1;
 
-export const SlideOut = styled(motion.div)`
-  position: fixed;
-  top: 92px;
+  top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
+
   background-color: ${(p) => p.theme.colors.darkBlue};
+  box-shadow: 0 0 5px rgba(255, 255, 255), 0 0 25px rgba(255, 255, 255, 0.8);
+
+  border: 1px dashed ${(p) => p.theme.colors.gold};
+  border-radius: 0.5rem;
 
   transform-origin: top;
+  backface-visibility: hidden;
 `;

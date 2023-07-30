@@ -1,12 +1,7 @@
 import styled from "styled-components";
 
-// export const LayoutStyled = styled.div`
-//   min-height: 80vh;
-//   border: 10px solid red;
-// `;
-
 export const Header = styled.header`
-  padding-top: 20px;
+  padding-top: 0.7rem;
 `;
 
 export const NavContainer = styled.div`
@@ -16,9 +11,9 @@ export const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  gap: 20px;
+  gap: 0.7rem;
 
-  padding-bottom: 20px;
+  padding-bottom: 0.7rem;
 
   &::after {
     content: "";
@@ -29,9 +24,8 @@ export const NavContainer = styled.div`
     bottom: 0px;
 
     width: 100%;
-    height:2px;
+    height: 2px;
 
     background-color: ${(p) => p.theme.colors.gold};
-    // border-radius: 2px;
   }
 `;

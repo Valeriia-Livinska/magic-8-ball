@@ -1,21 +1,27 @@
 import styled, { keyframes } from "styled-components";
 
-export const HomeSection = styled.section`
-  font-size: 24px;
-  color: ${(p) => p.theme.colors.gold};
-  text-align: center;
-`;
-
 export const HomeWrapper = styled.div`
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  align-items: center;
+
+  height: 100%;
+  bottom: -0.2rem;
+
+  font-size: 0.8rem;
+
+  color: ${(p) => p.theme.colors.gold};
 `;
 
 export const ImgWrapper = styled.div`
   position: relative;
-  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   width: 45%;
   max-width: 35vh;
@@ -29,6 +35,7 @@ const effectRotate = keyframes`
       transform: rotate(360deg);
     }
 `;
+
 const effectPuls = keyframes`
  
   0% {
@@ -40,8 +47,8 @@ const effectPuls = keyframes`
   100% {
     transform: scale(1.03, 0.98);
   }
-
 `;
+
 export const MoonEffects = styled.div`
   position: absolute;
 
