@@ -1,13 +1,14 @@
 import Container from "../../components/Container/Container";
 import transition from "../../components/Helpers/transition/transition";
+import { RegisterSection } from "./Register.styled";
 
 const Register = () => {
   return (
-    <section>
+    <RegisterSection>
       <Container>
         <h1>Register page</h1>
       </Container>
-    </section>
+    </RegisterSection>
   );
 };
 

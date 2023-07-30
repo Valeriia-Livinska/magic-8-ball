@@ -1,5 +1,5 @@
-import { ReactComponent as LogoSvg } from "../../assets/images/Moom_Logo_3_conv_1.svg";
-import { LogoLink } from "./Logo.styled";
+import moonLogo from "../../assets/images/Moom_Logo_3_conv_1.svg";
+import { LogoLink, LogoSvg } from "./Logo.styled";
 
 const Logo = () => {
   return (
@@ -8,8 +8,9 @@ const Logo = () => {
       href="https://github.com/Valeriia-Livinska"
       target="_blank"
       rel="noopener noreferrer"
+      className="logotip"
     >
-      <LogoSvg style={{ width: "45px", height: "45px" }} />
+      <LogoSvg src={moonLogo} alt="Logotip" />
     </LogoLink>
   );
 };

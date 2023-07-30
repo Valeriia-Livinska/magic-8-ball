@@ -23,7 +23,7 @@ const QuestionForm = ({ onSubmit, getAnswer }) => {
 
     const getAnswersArr = async () => {
       setLoading(true);
-      console.log(loading);
+      // console.log(loading);
       try {
         const data = await fetchAnswers();
         if (data.length > 0) {
@@ -35,7 +35,7 @@ const QuestionForm = ({ onSubmit, getAnswer }) => {
         // error notification
       } finally {
         setLoading(false);
-        console.log(loading);
+        // console.log(loading);
       }
     };
     getAnswersArr();
@@ -54,7 +54,7 @@ const QuestionForm = ({ onSubmit, getAnswer }) => {
             placeholder="Please type in your question"
           />
           <SubmitButton type="submit" disabled={loading}>
-            ask me
+            Ask ME
           </SubmitButton>
         </DecoRotateInput>
       </DecoFloatInput>

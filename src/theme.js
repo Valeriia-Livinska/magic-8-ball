@@ -22,7 +22,7 @@ export const theme = {
     textColorized: "#E0144C",
   },
 
-  space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
+  space: [0, 2, 4, 8, 16, "1rem", 64, 128, 256],
 
   fonts: {
     body: "system-ui, sans-serif",
@@ -32,12 +32,12 @@ export const theme = {
   },
 
   fontSizes: {
-    xs: "12px",
-    s: "14px",
-    m: "16px",
-    ml: "24px",
-    l: "32px",
-    xl: "64px",
+    xs: "0.375rem",
+    s: "0.4375rem",
+    m: "0.5rem",
+    ml: "0.75rem",
+    l: "1rem",
+    xl: "2rem",
   },
 
   fontWeights: {
