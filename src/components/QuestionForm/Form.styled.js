@@ -151,20 +151,24 @@ export const SubmitButton = styled.button`
     
     background-color: ${(p) => p.theme.colors.turquoise};
 
-    animation: ${blink} 4s linear infinite;
-
+    
     border-radius: 50%;
     border: 1px dashed ${(p) => p.theme.colors.gold};
     opacity: 0.6;
     box-shadow:   0 0 5px rgba(255, 255, 255),
        0 0 25px rgba(255, 255, 255, 0.8);
-
-    &:hover {
-      color: ${(p) => p.theme.colors.gold};
-      opacity: 1;
-      transition-duration: 0.5s;
-    }
-
+    
+    animation: ${blink} 4s linear infinite;
     transition-duration: 0.5s;
+    
+    &:hover {
+         color: ${(p) => p.theme.colors.gold};
+         opacity: 1;
+         transition-duration: 0.5s;
+       }
+
+    &:disabled {
+      opacity: 0;
+    }
 
   }`;

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { fetchAnswers } from "../Helpers/api";
 import {
   Form,
@@ -8,6 +9,8 @@ import {
 } from "./Form.styled";
 
 const QuestionForm = ({ onSubmit, getAnswer }) => {
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -19,7 +22,8 @@ const QuestionForm = ({ onSubmit, getAnswer }) => {
     onSubmit(query);
 
     const getAnswersArr = async () => {
-      // setLoading(true);
+      setLoading(true);
+      console.log(loading);
       try {
         const data = await fetchAnswers();
         if (data.length > 0) {
@@ -30,13 +34,13 @@ const QuestionForm = ({ onSubmit, getAnswer }) => {
         // setError(error);
         // error notification
       } finally {
-        // setLoading(false);
+        setLoading(false);
+        console.log(loading);
       }
     };
     getAnswersArr();
   };
 
-  // disable to button for several seconds while fetching
   // if the same question, than ask if you really want to ask the same question
 
   return (
@@ -49,7 +53,9 @@ const QuestionForm = ({ onSubmit, getAnswer }) => {
             autoComplete="off"
             placeholder="Please type in your question"
           />
-          <SubmitButton type="submit">Ask ME</SubmitButton>
+          <SubmitButton type="submit" disabled={loading}>
+            Ask ME
+          </SubmitButton>
         </DecoRotateInput>
       </DecoFloatInput>
     </Form>
