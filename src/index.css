@@ -7,13 +7,13 @@ html {
 
 @media only screen and (max-width: 320px) {
   html {
-    font-size:10px;
+    font-size: 10px;
   }
 }
 /*  small devices (landscape tablets, 320px and up) */
 @media only screen and (min-width: 321px) {
   html {
-    font-size:13px;
+    font-size: 13px;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
@@ -72,7 +72,7 @@ body::after {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-   color:#55bbb5 ;
+  color: #55bbb5;
 }
 
 h1,
@@ -112,6 +112,4 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-
 }
-

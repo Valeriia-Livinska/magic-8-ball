@@ -2,14 +2,30 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const HeaderNav = styled.nav`
+  position: relative;
+  z-index: 2;
+
   flex-grow: 1;
 `;
 
 export const HeaderNavList = styled.ul`
   display: flex;
- 
+  @media (max-width: 600px) {
+    scale: ${(p) => (p.$isopen === "open" ? 1 : 0)};
+  }
+
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 600px) {
+    position: absolute;
+
+    top: 5rem;
+    width: 100%;
+
+    flex-direction: column;
+    gap: 2rem;
+  }
 `;
 
 export const HeaderNavLink = styled(NavLink)`
@@ -17,9 +33,12 @@ export const HeaderNavLink = styled(NavLink)`
 
   font-family: ${(p) => p.theme.fonts.heading};
   font-size: ${(p) => p.theme.fontSizes.ml};
+  @media (max-width: 600px) {
+    font-size: ${(p) => p.theme.fontSizes.xl};
+  }
   color: ${(p) => p.theme.colors.turquoise};
 
-   ${(p) => (p.disabled ? "pointer-events: none" : "pointer-events: auto")};
+  ${(p) => (p.disabled ? "pointer-events: none" : "pointer-events: auto")};
 
   &:hover::after {
     content: "";
@@ -64,5 +83,3 @@ export const HeaderNavLink = styled(NavLink)`
     transition-duration: 0.5s;
   }
 `;
-
-

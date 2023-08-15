@@ -1,43 +1,59 @@
 import { useState } from "react";
 import { HeaderNav, HeaderNavList, HeaderNavLink } from "./Navigation.styled";
+import { MenuToggle } from "../MenuToggle/MenuToggle";
+// import { motion, useCycle } from "framer-motion";
 
-// import { useState } from "react";
 // import { HeaderNav, HeaderNavList, HeaderNavLink } from "./Navigation.styled";
 
-export const Nav = () => {
+export const Navigation = (props) => {
   const [disabled, setDisabled] = useState(false);
 
   const onClickHandler = () => {
     setDisabled(true);
     setTimeout(() => setDisabled(false), 5000);
   };
+
+  // const [isOpen, toggleOpen] = useCycle(false, true);
+  console.log(props.isopen);
+
   return (
-    <HeaderNav>
-      <HeaderNavList>
-        <li>
-          <HeaderNavLink to="/">Home</HeaderNavLink>
-        </li>
-        <li>
-          <HeaderNavLink
-            to="/login"
-            onClick={onClickHandler}
-            disabled={disabled}
-          >
-            Login
-          </HeaderNavLink>
-        </li>
-        <li>
-          <HeaderNavLink to="/qnalist">Q&A List</HeaderNavLink>
-        </li>
-        <li>
-          <HeaderNavLink to="/register">Register</HeaderNavLink>
-        </li>
-      </HeaderNavList>
-    </HeaderNav>
+    <>
+      <HeaderNav>
+        {/* <HeaderNavList isopen={isOpen ? "open" : "closed"}> */}
+        <HeaderNavList $isopen={props.isopen}>
+          <li>
+            <HeaderNavLink to="/" disabled={disabled}>
+              Home
+            </HeaderNavLink>
+          </li>
+          <li>
+            <HeaderNavLink
+              to="/login"
+              onClick={onClickHandler}
+              disabled={disabled}
+            >
+              Login
+            </HeaderNavLink>
+          </li>
+          <li>
+            <HeaderNavLink to="/qnalist" disabled={disabled}>
+              Q&A List
+            </HeaderNavLink>
+          </li>
+          <li>
+            <HeaderNavLink to="/register" disabled={disabled}>
+              Register
+            </HeaderNavLink>
+          </li>
+        </HeaderNavList>
+      </HeaderNav>
+
+      <MenuToggle toggle={props.toggle} isopen={props.isopen} />
+    </>
   );
 };
 
-export default Nav;
+export default Navigation;
 
 // export const Nav = (props) => {
 

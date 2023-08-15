@@ -2,10 +2,10 @@ import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
 import Container from "../Container/Container";
 import Logo from "../Logo/Logo";
-import Nav from "../Navigation/Navigation";
+import Navigation from "../Navigation/Navigation";
 import { Header, NavContainer } from "./Layout.styled";
-
-// import { LayoutStyled } from "./Layout.styled";
+import { useCycle } from "framer-motion";
+// import propTypes from "prop-types";
 
 // lazy used in APP let you not call load until the first time you attempt to render a component
 // then it will be cached - for this we need to use export default
@@ -14,13 +14,16 @@ import { Header, NavContainer } from "./Layout.styled";
 // in Outlet we can use a context to pass through some data
 
 const Layout = () => {
+  const [isOpen, toggleOpen] = useCycle("closed", "open");
+
   return (
     <>
       <Header>
         <Container>
-          <NavContainer>
+          <NavContainer $isopen={isOpen}>
             <Logo />
-            <Nav />
+            <Navigation toggle={() => toggleOpen()} isopen={isOpen} />
+            {/* <Navigation /> */}
           </NavContainer>
         </Container>
       </Header>
