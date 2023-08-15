@@ -27,10 +27,8 @@ const Home = () => {
 
   console.log(query);
   console.log(answer);
-  
+
   return (
-    // <HomeSection>
-    // <Container>
     <HomeWrapper>
       <h1>Home page</h1>
       <QuestionForm onSubmit={getQuery} getAnswer={getAnswer} />
@@ -41,8 +39,6 @@ const Home = () => {
         <MoonEffects />
       </ImgWrapper>
     </HomeWrapper>
-    // </Container>
-    // </HomeSection>
   );
 };
 
