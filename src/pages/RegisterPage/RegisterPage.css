@@ -1,0 +1,30 @@
+::-webkit-scrollbar {
+  /* height: 0.3rem; */
+  width: 0.3rem;
+
+  background: transparent;
+  border-radius: 0.15rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #185c57;
+  -webkit-border-radius: 0.15rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2db2a9;
+  box-shadow: inset 0 0 0.12rem #081623;
+}
+
+/* ::-webkit-scrollbar-corner {
+  background: red;
+} */
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.12rem #081623;
+  background: #bfa181;
+  border-radius: 0.15rem;
+}
+::-webkit-scrollbar-button {
+  height: 0.3rem;
+  background: transparent;
+}

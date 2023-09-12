@@ -3,11 +3,11 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Layout from "./components/Layout/Layout";
 
-import Home from "./pages/Home/Home";
-import Login from "./pages/Login/Login";
-import QnAList from "./pages/Q&A List/QnAList";
-import Register from "./pages/Register/Register";
-import NotFound from "./pages/Not found/NotFound";
+import HomePage from "./pages/HomePage/HomePage";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import QnAListPage from "./pages/Q&AListPage/QnAListPage";
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 // const HomePage = lazy(() => import("./pages/Home/Home.jsx"));
 // const LoginPage = lazy(() => import("./pages/Login/Login.jsx"));
@@ -24,11 +24,11 @@ const App = () => {
     <AnimatePresence mode="wait" initial={false}>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/qnalist" element={<QnAList />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="*" element={<NotFound />} />
+          <Route index element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/qnalist" element={<QnAListPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </AnimatePresence>

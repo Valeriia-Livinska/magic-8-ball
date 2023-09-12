@@ -1,18 +1,12 @@
 import { useState } from "react";
-// import Container from "../../components/Container/Container";
-import QuestionForm from "../../components/QuestionForm/Form";
+import RequestForm from "../../components/Forms/RequestForm/RequestForm";
 import AnswerField from "../../components/AnswerField";
 import transition from "../../components/Helpers/transition/transition";
-import {
-  // HomeSection,
-  HomeWrapper,
-  ImgWrapper,
-  MoonEffects,
-} from "./Home.styled";
+import { HomePageStyled, ImgWrapper, MoonEffects } from "./HomePage.styled";
 import moonOnHand from "../../assets/images/moonOnHand_5.png";
 import { randomAnswer } from "../../utils/randomAnswer";
 
-const Home = () => {
+const HomePage = () => {
   const [query, setQuery] = useState("");
   const [answer, setAnswer] = useState("");
 
@@ -29,17 +23,17 @@ const Home = () => {
   console.log(answer);
 
   return (
-    <HomeWrapper>
+    <HomePageStyled>
       <h1>Home page</h1>
-      <QuestionForm onSubmit={getQuery} getAnswer={getAnswer} />
+      <RequestForm onSubmit={getQuery} getAnswer={getAnswer} />
 
       <ImgWrapper>
         <AnswerField answer={answer} />
         <img src={moonOnHand} alt="Moon fortune-telling" />
         <MoonEffects />
       </ImgWrapper>
-    </HomeWrapper>
+    </HomePageStyled>
   );
 };
 
-export default transition(Home);
+export default transition(HomePage);

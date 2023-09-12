@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-export const HomeWrapper = styled.div`
+export const HomePageStyled = styled.div`
   position: relative;
 
   display: flex;
@@ -11,8 +11,7 @@ export const HomeWrapper = styled.div`
   height: 100%;
   bottom: -0.2rem;
 
-  font-size: 0.8rem;
-
+  font-size: ${(p) => p.theme.fontSizes.ml};
   color: ${(p) => p.theme.colors.gold};
 `;
 
