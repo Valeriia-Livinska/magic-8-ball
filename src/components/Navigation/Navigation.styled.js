@@ -10,10 +10,7 @@ export const HeaderNav = styled.nav`
 
 export const HeaderNavList = styled.ul`
   display: flex;
-  @media (max-width: 600px) {
-    scale: ${(p) => (p.$isopen === "open" ? 1 : 0)};
-  }
-
+ 
   justify-content: space-between;
   align-items: center;
 
@@ -25,6 +22,11 @@ export const HeaderNavList = styled.ul`
 
     flex-direction: column;
     gap: 2rem;
+
+    transform-origin: top right;
+    transform: scale(${(p) => (p.$isopen === "open" ? 1 : 0)});
+
+    transition-duration: 0.6s;
   }
 `;
 
@@ -40,6 +42,7 @@ export const HeaderNavLink = styled(NavLink)`
 
   ${(p) => (p.disabled ? "pointer-events: none" : "pointer-events: auto")};
 
+  // hover menu-button
   &:hover::after {
     content: "";
     position: absolute;
@@ -65,6 +68,7 @@ export const HeaderNavLink = styled(NavLink)`
     }
   }
 
+  // active menu-button
   &.active {
     color: ${(p) => p.theme.colors.turquoiseLite};
     &::after {

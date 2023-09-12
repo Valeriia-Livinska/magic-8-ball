@@ -14,6 +14,7 @@ export const theme = {
 
     turquoise: "#178582",
     turquoiseLite: "#2db2a9",
+    turquoiseDark: "#185c57",
 
     gold: "#BFA181",
     goldLite: "#e2c798",

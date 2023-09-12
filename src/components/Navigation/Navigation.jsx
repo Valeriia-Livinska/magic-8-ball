@@ -13,10 +13,7 @@ export const Navigation = (props) => {
     setTimeout(() => setDisabled(false), 5000);
   };
 
-  // const [isOpen, toggleOpen] = useCycle(false, true);
-  console.log(props.isopen);
-
-  return (
+    return (
     <>
       <HeaderNav>
         {/* <HeaderNavList isopen={isOpen ? "open" : "closed"}> */}

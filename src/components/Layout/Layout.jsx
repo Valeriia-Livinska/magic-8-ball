@@ -1,10 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
-import Container from "../Container/Container";
-import Logo from "../Logo/Logo";
-import Navigation from "../Navigation/Navigation";
-import { Header, NavContainer } from "./Layout.styled";
+
 import { useCycle } from "framer-motion";
+import Header from "../Header/Header";
 // import propTypes from "prop-types";
 
 // lazy used in APP let you not call load until the first time you attempt to render a component
@@ -14,19 +12,11 @@ import { useCycle } from "framer-motion";
 // in Outlet we can use a context to pass through some data
 
 const Layout = () => {
-  const [isOpen, toggleOpen] = useCycle("closed", "open");
 
   return (
     <>
-      <Header>
-        <Container>
-          <NavContainer $isopen={isOpen}>
-            <Logo />
-            <Navigation toggle={() => toggleOpen()} isopen={isOpen} />
-            {/* <Navigation /> */}
-          </NavContainer>
-        </Container>
-      </Header>
+      <Header/>
+
       <Suspense
       // fallback={
       //   <Spinner />

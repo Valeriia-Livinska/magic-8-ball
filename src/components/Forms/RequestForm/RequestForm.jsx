@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { fetchAnswers } from "../Helpers/api";
+import { fetchAnswers } from "../../Helpers/api";
 import {
-  Form,
+  RequestFormStyled,
   DecoFloatInput,
   DecoRotateInput,
-  Input,
-  SubmitButton,
-} from "./Form.styled";
+  InputField,
+} from "./RequestFormStyled.styled";
+import SubmitButton from "../../SubmitButton/SubmitButton";
 
-const QuestionForm = ({ onSubmit, getAnswer }) => {
+const RequestForm = ({ onSubmit, getAnswer }) => {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (event) => {
@@ -44,22 +44,26 @@ const QuestionForm = ({ onSubmit, getAnswer }) => {
   // if the same question, than ask if you really want to ask the same question
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <RequestFormStyled onSubmit={handleSubmit}>
       <DecoFloatInput>
         <DecoRotateInput>
-          <Input
+          <InputField
             type="text"
             name="query"
             autoComplete="off"
             placeholder="Please type in your question"
           />
-          <SubmitButton type="submit" disabled={loading}>
+          {/* <SubmitButton type="submit" disabled={loading}>
+            Ask ME
+          </SubmitButton> */}
+
+          <SubmitButton id="submit-button" disabled={loading}>
             Ask ME
           </SubmitButton>
         </DecoRotateInput>
       </DecoFloatInput>
-    </Form>
+    </RequestFormStyled>
   );
 };
 
-export default QuestionForm;
+export default RequestForm;
